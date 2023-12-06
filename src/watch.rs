@@ -22,9 +22,9 @@ type FsDebouncer = Debouncer<RecommendedWatcher, FileIdMap>;
 /// Blacklisted path segments which are ignored by the watcher by default.
 const BLACKLIST: [&str; 1] = [".git"];
 /// The duration of time to debounce FS events.
-const DEBOUNCE_DURATION: Duration = Duration::from_millis(25);
+const DEBOUNCE_DURATION: Duration = Duration::ZERO;
 /// The duration of time during which watcher events will be ignored following a build.
-const WATCHER_COOLDOWN: Duration = Duration::from_secs(1);
+const WATCHER_COOLDOWN: Duration = Duration::ZERO;
 
 /// A watch system wrapping a build system and a watcher.
 pub struct WatchSystem {
